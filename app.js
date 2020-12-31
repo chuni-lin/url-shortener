@@ -1,8 +1,8 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
-const Url = require('./models/url')
-const randomNumber = require('./randomNumber.js')
+// const Url = require('./models/url')
+// const randomNumber = require('./randomNumber.js')
 const routes = require('./routes')
 
 const app = express()
