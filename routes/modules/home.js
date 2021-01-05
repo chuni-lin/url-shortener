@@ -19,6 +19,7 @@ router.post('/', (req, res) => {
   let randomURL = random()
   return URL.find()
     .lean()
+    // To check if there's repeated random url
     .then(urls => {
       const arr = []
       urls.forEach(url => arr.push(url.shortenedUrl))
