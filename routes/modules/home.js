@@ -16,18 +16,20 @@ router.post('/', (req, res) => {
     const alert = 'Please input an appropriate URL'
     res.render('index', { alert, url })
   }
-  URL.findOne({ originalUrl: url })
+  let randomURL = random()
+  return URL.find()
     .lean()
-    // To check if there's an existed URL in the database
-    .then(repeatedURL => {
-      if (repeatedURL) {
-        res.render('result', { randomURL: repeatedURL.shortenedUrl })
+    .then(urls => {
+      const arr = []
+      urls.forEach(url => arr.push(url.shortenedUrl))
+      while (arr.includes(randomURL)) {
+        randomURL = random()
       }
-      let randomURL = random()
-      URL.create({
-        originalUrl: url,
-        shortenedUrl: randomURL
-      })
+    })
+    .then(() => {
+      return URL.create({ originalUrl: url, shortenedUrl: randomURL })
+    })
+    .then(() => {
       return res.render('result', { randomURL })
     })
     .catch(error => console.log(error))
