@@ -17,15 +17,29 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand mb-0 h1" href="/">
-          URL Shortener
+          URL SHORTENER
           <i class="fas fa-link"></i></a>
       </div>
     </nav>
   </header>
 
-  <main>
-    {{{ body }}}
-  </main>
+  <div class="container-md py-5">
+    <div class="row">
+      <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+        <div class="card bg-light">
+          <div class="card-body">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <h3 class="card-title text-dark">URL SHORTENER</h3>
+              <h1>
+                <i class="fas fa-link my-5 text-black-50" style="font-size: 100px;"></i>
+              </h1>
+            </div>
+            {{{ body }}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   {{!-- Bootstrap --}}
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -40,7 +54,7 @@
   {{!-- Font Awesome --}}
   <script src="https://kit.fontawesome.com/4a6876fd2b.js" crossorigin="anonymous"></script>
   {{!-- Public --}}
-  <script src="/javascripts/copyLink.js"></script>
+  <script src="/javascripts/copy.js"></script>
 </body>
 
 </html>
