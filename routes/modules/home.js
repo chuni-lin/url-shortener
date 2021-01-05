@@ -21,9 +21,9 @@ router.post('/', (req, res) => {
     .lean()
     // To check if there's repeated random url
     .then(urls => {
-      const arr = []
-      urls.forEach(url => arr.push(url.shortenedUrl))
-      while (arr.includes(randomURL)) {
+      const checkArr = []
+      urls.forEach(url => checkArr.push(url.shortenedUrl))
+      while (checkArr.includes(randomURL)) {
         randomURL = random()
       }
     })
