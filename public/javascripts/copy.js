@@ -11,7 +11,7 @@ copyBtn.addEventListener('click', copyLink)
 copyBtn.addEventListener('mouseout', resetTooltip)
 
 // Define function
-function copyLink() {
+function copyLink () {
   // copy
   const el = document.createElement('input')
   el.value = link.href
@@ -25,12 +25,12 @@ function copyLink() {
   changeTooltip()
 }
 
-function changeTooltip() {
+function changeTooltip () {
   copyBtn.dataset.originalTitle = `Copied: ${link.href}`
   $('[data-toggle="tooltip"]').tooltip('hide')
   $('[data-toggle="tooltip"]').tooltip('show')
 }
 
-function resetTooltip() {
+function resetTooltip () {
   copyBtn.dataset.originalTitle = 'Copy to clipboard'
 }

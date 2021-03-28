@@ -3,11 +3,11 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1">URL</span>
     </div>
-    <input type="text" name="url" class="form-control" id="url" placeholder="https://example.com" {{#if
-      url}}value="{{url}}" {{/if}} required>
+    <input type="text" name="originalUrl" class="form-control" id="url" placeholder="https://example.com" {{#if
+      originalUrl}}value="{{originalUrl}}" {{/if}} required>
   </div>
   {{#if alert}}
-  <span class="text-danger mb-3"><i class="fas fa-exclamation-circle mr-1"></i>{{alert}}</span>
+    <span class="text-danger mb-3"><i class="fas fa-exclamation-circle mr-1"></i>{{alert}}</span>
   {{/if}}
   <div class="d-flex justify-content-center align-items-center">
     <button class="btn btn-primary btn-lg" type="submit">Shorten</button>
